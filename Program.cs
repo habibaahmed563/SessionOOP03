@@ -102,17 +102,17 @@ namespace SessionOOP03
             //    Console.WriteLine($"{item}");
             //}
 
-            Employee[] employee = new Employee[3]
-            {
-                new Employee(){Id = 1,Name = "Ahmed" , Age = 30 , Salary = 12000},
-                new Employee(){Id = 2,Name = "Omar" , Age = 27 , Salary = 11000},
-                new Employee(){Id = 3,Name = "Ali" , Age = 28, Salary = 13000}
-            };
-            Array.Sort(employee);
-            foreach (Employee item in employee)
-            {
-                Console.WriteLine(item);
-            }
+            //Employee[] employee = new Employee[3]
+            //{
+            //    new Employee(){Id = 1,Name = "Ahmed" , Age = 30 , Salary = 12000},
+            //    new Employee(){Id = 2,Name = "Omar" , Age = 27 , Salary = 11000},
+            //    new Employee(){Id = 3,Name = "Ali" , Age = 28, Salary = 13000}
+            //};
+            //Array.Sort(employee);
+            //foreach (Employee item in employee)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region interface E03
@@ -193,6 +193,8 @@ namespace SessionOOP03
             //Console.WriteLine(Arr01[0]); 
             #endregion
 
+            #region Built-in interface Icloneable
+
             Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Age = 29, Salary = 12000 };
             Employee E02 = new Employee() { Id = 2, Name = "Amr", Age = 32, Salary = 11000 };
 
@@ -205,6 +207,29 @@ namespace SessionOOP03
             Console.WriteLine(E02.GetHashCode());
             Console.WriteLine(E01);
             Console.WriteLine(E02);
+            #endregion
+
+            #region Built-in interface Icloneable
+
+            //Employee[] employee = new Employee[3]
+            //{
+            //    new Employee(){Id = 1,Name = "Ahmed" , Age = 30 , Salary = 12000},
+            //    new Employee(){Id = 2,Name = "Omar" , Age = 27 , Salary = 11000},
+            //    new Employee(){Id = 3,Name = "Ali" , Age = 28, Salary = 13000}
+            //};
+
+            //Array.Sort(employee);
+
+            //int x = employee[0].CompareTo(employee[1]);
+            ////+ve : caller Greater than parameter
+            ////-ve : caller less than parameter 
+            ////0   :caller Equal parameter 
+
+            //foreach (Employee item in employee)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
 
 
         }

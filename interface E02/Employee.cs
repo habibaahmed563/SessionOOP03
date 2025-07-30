@@ -22,5 +22,16 @@ namespace SessionOOP03.interface_E02
         {
             return $"is : {Id} , name: {Name} , age : {Age} , salary : {Salary}";
         }
+
+        public int CompareTo(object? obj)
+        {
+            Employee e = (Employee)obj;
+
+            //if (this.Age > e.Age) return 312;
+            //else if (this.Age < e.Age) return -312;
+            //else return 0;
+
+            return this.Age.CompareTo(e.Age);
+        }
     }
 }
