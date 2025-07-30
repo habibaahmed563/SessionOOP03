@@ -1,4 +1,6 @@
-﻿namespace SessionOOP03
+﻿using SessionOOP03.interface_E02;
+
+namespace SessionOOP03
 {
 
     //1. class
@@ -8,8 +10,52 @@
 
     internal class Program
     {
+        //static void print10number (SeriesByTwo series )
+        //{
+        //    for(int i = 0; i<10;i++)
+        //    {
+        //        Console.WriteLine($"{series.current}");
+        //        series.Next();
+        //    }
+        //    Console.WriteLine();
+        //    series.Reset();
+        //}
+
+        //static void print10number(SeriesByThree series)
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine($"{series.current}");
+        //        series.Next();
+        //    }
+        //    Console.WriteLine();
+        //    series.Reset();
+        //}
+
+        //static void print10number(SeriesbyFour series)
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine($"{series.current}");
+        //        series.Next();
+        //    }
+        //    Console.WriteLine();
+        //    series.Reset();
+        //}
+
+        static void print10number(Iseries series)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"{series.current}");
+                series.Next();
+            }
+            Console.WriteLine();
+            series.Reset();
+        }
         static void Main(string[] args)
         {
+            #region interface E01 
 
             //interfaces : reference type 
             //code contract between two developer who write it and the developer who use it [implementation]
@@ -31,6 +77,42 @@
             Console.WriteLine(mytype.salary);
             mytype.Mytype();
             mytype.print();
+            #endregion
+
+            #region interface E02
+            //SeriesByTwo seriesByTwo = new SeriesByTwo();
+
+            //SeriesByThree seriesByThree = new SeriesByThree();
+
+            //SeriesbyFour seriesByFour = new SeriesbyFour();
+
+
+            //print10number(seriesByTwo);
+            //print10number(seriesByThree);
+            //print10number(seriesByFour);
+
+            //int[] numbers = { 7, 6, 5, 4, 3, 2, 1, 8, 9 };
+
+            //Array.Sort(numbers);
+
+            //foreach(int item in numbers )
+            //{
+            //    Console.WriteLine($"{item}");
+            //}
+
+            Employee[] employee = new Employee[3]
+            {
+                new Employee(){Id = 1,Name = "Ahmed" , Age = 30 , Salary = 12000},
+                new Employee(){Id = 2,Name = "Omar" , Age = 27 , Salary = 11000},
+                new Employee(){Id = 3,Name = "Ali" , Age = 28, Salary = 13000}
+            };
+            Array.Sort(employee);
+            foreach (Employee item in employee)
+            {
+                Console.WriteLine(item);
+            } 
+            #endregion
+
         }
     }
 }
