@@ -1,4 +1,5 @@
 ﻿using SessionOOP03.interface_E02;
+using SessionOOP03.interfaceE03;
 
 namespace SessionOOP03
 {
@@ -110,8 +111,26 @@ namespace SessionOOP03
             foreach (Employee item in employee)
             {
                 Console.WriteLine(item);
-            } 
+            }
             #endregion
+
+            #region interface E03
+            //Car car = new Car();
+
+            //car.Speed = 120;
+            //car.Forward();
+
+            Airplane airplane = new Airplane();
+
+            IMoveable moveable = airplane;
+            moveable.Forward();
+
+            IFlyable flyable = airplane;
+            flyable.Forward(); 
+            #endregion
+
+
+
 
         }
     }
