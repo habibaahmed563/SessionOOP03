@@ -231,7 +231,19 @@ namespace SessionOOP03
             //} 
             #endregion
 
+            Employee[] employee = new Employee[3]
+            {
+                new Employee(){Id = 1,Name = "Ahmed" , Age = 30 , Salary = 12000},
+                new Employee(){Id = 2,Name = "Omar" , Age = 27 , Salary = 11000},
+                new Employee(){Id = 3,Name = "Ali" , Age = 28, Salary = 13000}
+            };
 
+            Array.Sort(employee);
+
+            foreach (Employee item in employee)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
