@@ -1,5 +1,6 @@
 ﻿using SessionOOP03.interface_E02;
 using SessionOOP03.interfaceE03;
+using System.Text;
 
 namespace SessionOOP03
 {
@@ -126,10 +127,71 @@ namespace SessionOOP03
             moveable.Forward();
 
             IFlyable flyable = airplane;
-            flyable.Forward(); 
+            flyable.Forward();
             #endregion
 
+            #region shallow copy Vs Deep copy 
+            //shallow copy Vs Deep copy 
 
+            //int[] Arr01 = { 1, 2, 3 };
+            //int[] Arr02 = { 4, 5, 6 };
+
+
+            //string[] Arr01 = { "AHmed", "Ali", "omar" };
+            //string[] Arr02 = { "Ziad", "adel", "amr" };
+
+            //  StringBuilder[] Arr01 = new StringBuilder[]
+            //  {
+            //      new StringBuilder("Ahmed"),
+            //      new StringBuilder("Ali"),
+            //      new StringBuilder("Omar")
+            //  };
+
+            //  StringBuilder[] Arr02 = new StringBuilder[]
+            //{
+            //      new StringBuilder("Amr"),
+            //      new StringBuilder("Adel"),
+            //      new StringBuilder("Ziad")
+            //};
+
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+
+            //Arr02 = Arr01; //shallow copy
+            ////Copy Identity
+            ////{1,2,3} --> Has Two reference Arr01,Arr02
+            ////{4,5,6} --> UnReachable object 
+
+            //Console.WriteLine();
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+
+            ////Identity (address) + object state [Date]
+
+            //Arr02[0] = 100;
+
+            //Console.WriteLine(Arr01[0]);
+
+            //int[] Arr01 = { 1, 2, 3 };
+            //int[] Arr02 = { 4, 5, 6 };
+
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+
+            //Arr02 = (int[]) Arr01.Clone(); //Deep copy
+            ////Clone Methodwill copy the object state of the caller
+            ////assign the new object to Arr02 , will genetrate new identity
+
+            //Console.WriteLine();
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr01 : {Arr01.GetHashCode()}");
+
+            //Identity (address) + object state [Date]
+
+            //Arr02[0] = 100;
+
+            //Console.WriteLine(Arr01[0]); 
+            #endregion
 
 
         }
