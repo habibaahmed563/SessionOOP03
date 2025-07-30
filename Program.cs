@@ -193,6 +193,19 @@ namespace SessionOOP03
             //Console.WriteLine(Arr01[0]); 
             #endregion
 
+            Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Age = 29, Salary = 12000 };
+            Employee E02 = new Employee() { Id = 2, Name = "Amr", Age = 32, Salary = 11000 };
+
+            E02 = E01; // shallow copy
+            E02 = (Employee)E01.Clone(); //Deep copy
+
+            E01.Salary = 5;
+
+            Console.WriteLine(E01.GetHashCode());
+            Console.WriteLine(E02.GetHashCode());
+            Console.WriteLine(E01);
+            Console.WriteLine(E02);
+
 
         }
     }
