@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            /*part01*/
+            /* part01 */
 
 
             //Q1 : A
@@ -28,7 +28,15 @@
 
             //Q10: C
 
-          /*------------------*/
+            /*------------------*/
+
+            /* Part02 */
+
+            ICircle circle = new Circle(5);
+            IRectangle rectangle = new Rectangle(2,3);
+
+            circle.DisplayShapeinfo();
+            rectangle.DisplayShapeinfo();
         }
     }
 }
