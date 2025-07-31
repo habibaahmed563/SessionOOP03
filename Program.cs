@@ -32,11 +32,31 @@
 
             /* Part02 */
 
+            #region Q1 Part02
             ICircle circle = new Circle(5);
-            IRectangle rectangle = new Rectangle(2,3);
+            IRectangle rectangle = new Rectangle(2, 3);
 
             circle.DisplayShapeinfo();
             rectangle.DisplayShapeinfo();
+            #endregion
+
+            #region Q2 Part02
+            IAuthenticationService authservice = new BasicAuthenticationService();
+            string username = "username";
+            string password = "password";
+            string role = "admin";
+            ;
+            bool isAuthenticated = authservice.AuthenticateUser(username, password);
+            Console.WriteLine($"authenticated : {isAuthenticated}");
+
+            bool isAuthorizes = authservice.AuthenticateUser(username, role);
+            Console.WriteLine($"Authorizes  : {isAuthorizes}"); 
+            #endregion
+
+
+
+
+
         }
     }
 }
