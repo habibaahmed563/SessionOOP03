@@ -50,9 +50,21 @@
             Console.WriteLine($"authenticated : {isAuthenticated}");
 
             bool isAuthorizes = authservice.AuthenticateUser(username, role);
-            Console.WriteLine($"Authorizes  : {isAuthorizes}"); 
+            Console.WriteLine($"Authorizes  : {isAuthorizes}");
             #endregion
 
+            #region Q3 Part02
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
+
+            string recipient = "habiba@.com";
+            string message = "hello world";
+
+            emailService.SendNotification(recipient, message);
+            smsService.SendNotification(recipient, message);
+            pushService.SendNotification(recipient, message); 
+            #endregion
 
 
 
